@@ -50,6 +50,25 @@ module.exports = function(app, passport){
     });
   });
 
+
+
+  /*
+    Facebook Routes
+  */
+  // route for facebook authentication and login
+  app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+  /*
+    By default, Facebook will provide you with user information, but not the email address.
+    We will add this by specifying the scope. You can also add in more scopes to access more information.
+  */
+
+  //handle the callback after facebook has authenticated the user
+  app.get('/auth/facebook/callback',
+    passport.authenticate('facebook', {
+      successRedirect : '/profile',
+      failureRedirect : '/'
+    }));
+
   //Logout
   app.get('/logout', function(req, res){
     req.logout(); //req.logout() is provided by passport
