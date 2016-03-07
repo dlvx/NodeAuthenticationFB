@@ -1,8 +1,8 @@
-# NodeAuthentication
+# NodeAuthenticationFB
 
-Node.js App based on the Easy Node Authentication Tutorial from Scotch.io (https://scotch.io/tutorials/easy-node-authentication-setup-and-local)
+Node.js App based on the Easy Node Authentication: Facebook Tutorial from Scotch.io (https://scotch.io/tutorials/easy-node-authentication-facebook)
 
-This covers the Local Authentication part only.
+This covers the Facebook Authentication part only.
 
 I totally recommend this tutorial for everyone trying to learn and understand how **Node.js** Authentication works
 using **Passport.js**. 
