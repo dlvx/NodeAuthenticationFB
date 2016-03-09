@@ -1,4 +1,4 @@
-# NodeAuthenticationFB
+# NodeAuthenticationSocial
 
 Node.js App based on the Easy Node Authentication Tutorial from Scotch.io 
 
