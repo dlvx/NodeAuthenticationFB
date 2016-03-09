@@ -69,11 +69,39 @@ module.exports = function(app, passport){
       failureRedirect : '/'
     }));
 
+  /*
+    Twitter Routes
+  */
+  // route for twitter auth and login
+  app.get('/auth/twitter', passport.authenticate('twitter'));
+
+  //handle callback after twitter has authenticated the user
+  app.get('/auth/twitter/callback',
+    passport.authenticate('twitter', {
+      successRedirect : '/profile',
+      failureRedirect : '/'
+  }));
+
+
+  /*
+    Google Routes
+  */
+  app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email' ]}));
+
+  //callback after google has authenticated the user
+  app.get('/auth/google/callback',
+      passport.authenticate('google', {
+        successRedirect : '/profile',
+        failureRedirect : '/'
+      }));
+
+
   //Logout
   app.get('/logout', function(req, res){
     req.logout(); //req.logout() is provided by passport
     res.redirect('/');
   });
+
 };
 
 //route middleware to make sure a user is logged in

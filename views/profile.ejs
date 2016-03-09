@@ -33,10 +33,36 @@
             <h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
 
             <p>
-              <strong>id</strong>: <%= user._id %> <br>
+              <strong>id</strong>: <%= user.facebook.id %> <br>
               <strong>email</strong>: <%= user.facebook.email %> <br>
               <strong>token</strong>: <%= user.facebook.token %> <br>
               <strong>name</strong>: <%= user.facebook.name %> <br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="well">
+            <h3 class="text-info"><span class="fa fa-twitter"></span> Twitter</h3>
+
+            <p>
+              <strong>id</strong>: <%= user.twitter.id %> <br>
+              <strong>email</strong>: <%= user.twitter.username %> <br>
+              <strong>token</strong>: <%= user.twitter.token %> <br>
+              <strong>name</strong>: <%= user.twitter.displayName %> <br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="well">
+            <h3 class="text-danger"><span class="fa fa-google-plus"></span> Google</h3>
+
+            <p>
+              <strong>id</strong>: <%= user.google.id %> <br>
+              <strong>email</strong>: <%= user.google.token %> <br>
+              <strong>token</strong>: <%= user.google.email %> <br>
+              <strong>name</strong>: <%= user.google.name %> <br>
             </p>
           </div>
         </div>
